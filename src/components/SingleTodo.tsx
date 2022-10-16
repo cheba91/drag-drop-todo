@@ -1,7 +1,7 @@
 import { Todo } from '../model';
 import './styles.css';
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
-import { MdDone } from 'react-icons/md';
+// import { MdDone } from 'react-icons/md';
 import { useState } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 
@@ -16,13 +16,13 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos, index }) => {
    const [edit, setEdit] = useState<boolean>(false);
    const [todoText, setTodoText] = useState<string>(todo.todo);
 
-   const handleDone = (id: number) => {
-      setTodos(
-         todos.map((todo) =>
-            todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
-         )
-      );
-   };
+   // const handleDone = (id: number) => {
+   //    setTodos(
+   //       todos.map((todo) =>
+   //          todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
+   //       )
+   //    );
+   // };
    const handleDelete = (id: number) => {
       setTodos(todos.filter((todo) => todo.id !== id));
    };
